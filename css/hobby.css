@@ -1,0 +1,399 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto',sans-serif;
+}
+body{
+    background-color: #333;
+}
+span{
+    color:#47b7e7;
+}
+nav{
+    display: flex;
+    height: 80px;
+    width: 100%;
+    background: #1b1b1b;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 50px 0 100px;
+    flex-wrap: wrap;
+    position: sticky;
+    top:0;
+  }
+  nav .logo{
+    color: rgb(126, 61, 212);
+    font-size: 35px;
+    font-weight: 600;
+    
+  }
+  
+  nav ul{
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+  }
+  nav ul li{
+    margin: 0 5px;
+  }
+  nav ul li a{
+    color: #ccc0c0;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 8px 15px;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+  }
+  nav ul li a.active,
+  nav ul li a:hover{
+    color: rgb(8, 8, 8);
+    background: rgb(196, 184, 184);
+  }
+  nav .menu-btn i{
+    color: #fff;
+    font-size: 22px;
+    cursor: pointer;
+    display: none;
+  }
+  input[type="checkbox"]{
+    display: none;
+  }
+  
+  
+  
+ 
+
+.inner{
+    padding-top: 80px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: -1;
+    width: 100%;
+    
+    
+}
+.header{
+    text-align: center;
+    color: #fff;
+    padding: 1em;
+    position: relative;
+}
+.header:after{
+    content:'';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 4px;
+    width: 100px;
+    background-color: #2ecc71;
+    border-radius: 2px;
+}
+.container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    grid-gap: 1rem;
+    padding: 1rem 80px;
+    font-size: 1.2rem;
+}
+.hobby-box{
+    padding:1rem;
+    color:#ddd;
+    cursor: pointer;
+}
+.hobby-title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+    position: relative;
+}
+.img{
+    width: 90px;
+    height: 90px;
+    position: relative;
+    border-radius: 45px;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .5s;
+}
+.hobby-title h3{
+    color:#fff;
+    margin-top: 0.5rem;
+}
+.hobby-icon{
+    width: 50px;
+    z-index: 2;
+}
+.img:after{
+    content:'';
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 50%;
+    height: 90px;
+    background: rgba(100,100,100,0.5);
+    border-radius: 45px 0 0 45px;
+
+    
+}
+.hobby-title:after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 50%;
+    width: 0;
+    height: 4px;
+    border-radius: 2px 0 0 2px;
+    background-color: #2ecc71;
+    transition: .5s;
+}
+.hobby-title:before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 4px;
+    border-radius: 0 2px 2px 0;
+    background-color: #2ecc71;
+    transition: .5s;
+}
+.hobby-box:hover > .hobby-title:after, .hobby-box:hover > .hobby-title:before{
+    width: 35px;
+}
+.hobby-box:hover .img{
+    transform: translateY(-10px);
+}
+
+.footer-bottom{
+    
+    width: 100%;
+    padding: 20px 0;
+    text-align: center;
+    background-color: rgba(172, 154, 154, 0.6);
+}
+.footer-bottom p{
+    font-size: 14px;
+    word-spacing: 2px;
+    text-transform: capitalize;
+}
+.footer-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+footer{
+    display:grid;
+    height:100%;
+    width:100%;
+    place-items: center;
+    background: linear-gradient(315deg,#ffffff,#d7e1ec);
+    margin-top: 600px;
+    }
+    .wrapper{
+        display: inline-flex;
+    }
+    .wrapper .icon{
+        margin: 0 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        flex-direction: column;
+        position: relative;
+        z-index: 2;
+        transition: all 0.4s cubic-bezier(0.68,-0.55,0.265,1.55);
+    }
+    .wrapper .icon span{
+        height: 60px;
+        width: 60px;
+        position: relative;
+        display: block;
+        z-index: 2;
+        background: #fff;
+        box-shadow: 0 10px 10px rgba(0,0,0,0.1);
+        text-align: center;
+        border-radius: 50%;
+    }
+    .wrapper .icon span i{
+        font-size: 25px;
+        line-height: 60px;
+    }
+    
+    .wrapper .icon .tooltip{
+        position: absolute;
+        top: 0px;
+        color: #fff;
+        background: #fff;
+        font-size: 20px;
+        padding: 10px 18px;
+        border-radius: 25px;
+        box-shadow: 0 10px 10px rgba(0,0,0,0.1);
+        opacity: 0;
+        pointer-events: none;
+        transition: all 0.4s cubic-bezier(0.68,-0.55,0.265,1.55);
+    }
+    .wrapper .icon:hover .tooltip{
+        opacity: 1;
+        pointer-events: auto;
+        top: -70px;
+    }
+    .wrapper .icon:hover span{
+        color:#fff;
+    }
+    .wrapper .icon .tooltip:before{
+        position: absolute;
+        content: "";
+        height: 15px;
+        width: 15px;
+        background: #fff;
+        bottom: -8px;
+        left: 50%;
+        transition: all 0.4s cubic-bezier(0.68,-0.55,0.265,1.55);
+        transform: translateX(-50%) rotate(45deg);
+    }
+    .wrapper .icon:hover span,
+    .wrapper .icon:hover .tooltip{
+        text-shadow: 0px -1px 0px rgba(0,0,0,0.4);
+    }
+    .wrapper .facebook:hover span,
+    .wrapper .facebook:hover .tooltip,
+    .wrapper .facebook:hover .tooltip:before{
+        background: #3B5999;
+    }
+    .wrapper .twitter:hover span,
+    .wrapper .twitter:hover .tooltip,
+    .wrapper .twitter:hover .tooltip:before{
+        background: #46C1F6;
+    }
+    .wrapper .instagram:hover span,
+    .wrapper .instagram:hover .tooltip,
+    .wrapper .instagram:hover .tooltip:before{
+        background: #e1306c;
+    }
+    .wrapper .telegram:hover span,
+    .wrapper .telegram:hover .tooltip,
+    .wrapper .telegram:hover .tooltip:before{
+        background: #42a3cc;
+    }
+
+    .wrapper .github:hover span,
+    .wrapper .github:hover .tooltip,
+    .wrapper .github:hover .tooltip:before{
+        background: #333;
+    }
+    .wrapper .messanger:hover span,
+    .wrapper .messanger:hover .tooltip,
+    .wrapper .messanger:hover .tooltip:before{
+        background: rgb(17, 17, 136);
+    }
+
+@media screen and (max-width:990px){
+    .container{
+        grid-template-columns: repeat(2,1fr);
+        padding: 2rem 50px;
+    }
+
+}
+@media screen and (max-width:1400px){
+
+    #footer{
+        margin-top: 700px;
+
+    }
+    .inner{
+        margin-top: 70px;
+    }
+}
+@media screen and (max-width:990px){
+
+    #footer{
+        margin-top: 1000px;
+
+    }
+    .inner{
+        margin-top: 190px;
+    }
+}
+
+@media screen and (max-width:650px){
+    .container{
+        grid-template-columns: 1fr;
+        padding: 2rem 50px;
+    }
+    #footer{
+        margin-top: 1800px;
+
+    }
+    .inner{
+        margin-top: 550px;
+    }
+
+}
+
+@media (max-width: 920px) {
+    nav .menu-btn i{
+      display: block;
+    }
+    #footer span{
+      display:contents;
+      
+    }
+    h3{
+      font-size: medium;
+    }
+    #click:checked ~ .menu-btn i:before{
+      content: "\f00d";
+    }
+  
+ 
+    nav ul{
+      position: fixed;
+      top: 80px;
+      left: -100%;
+      background: #111;
+      height: 100vh;
+      width: 100%;
+      text-align: center;
+      display: block;
+      transition: all 0.3s ease;
+    }
+    #click:checked ~ ul{
+      left: 0;
+    }
+    nav ul li{
+      width: 100%;
+      margin: 40px 0;
+    }
+    nav ul li a{
+      width: 100%;
+      margin-left: -100%;
+      display: block;
+      font-size: 20px;
+      transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+    #click:checked ~ ul li a{
+      margin-left: 0px;
+    }
+    nav ul li a.active,
+    nav ul li a:hover{
+      background: none;
+      color: cyan;
+    }
+  }
